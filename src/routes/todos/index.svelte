@@ -7,7 +7,7 @@
     let graphQLEndpoint = `${import.meta.env.VITE_GRAPHQL_ENDPOINT}`;
     let header = `Bearer ${accessToken}`;
 
-    console.log(JSON.stringify(accessToken));
+    console.log(JSON.stringify(`${accessToken`}));
 
     initClient({
         url: graphQLEndpoint,
