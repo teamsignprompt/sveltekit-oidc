@@ -4,8 +4,8 @@
 
 <script lang="ts">
     import { isAuthenticated, isLoading, authError, accessToken, LoginButton, LogoutButton } from '$lib';
-    import Header from './components/shared/Header/index.svelte';
-    
+    import Header from '../components/shared/Header/index.svelte';
+
     let access_token_elem;
     let is_access_token_copied = false;
     function copyAccessTokenToClipboard() {
