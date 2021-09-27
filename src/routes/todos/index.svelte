@@ -39,7 +39,7 @@
 <KeycloakProtectedRoute>
     <Header></Header>
     <div class="h-screen-minus-navbar bg-gray-800 text-white flex flex-col justify-center items-center w-full">
-        {#if $todos.fetching}
+        <!--{#if $todos.fetching}
             <p>Loading...</p>
         {:else if $todos.error}
             <p>Oh no... {$todos.error.message}</p>
@@ -49,7 +49,7 @@
                 <li>{todo.uuid}</li>
                 {/each}
             </ul>
-        {/if}
+        {/if}-->
         <LogoutButton>Logout</LogoutButton>
     </div>
 </KeycloakProtectedRoute>
