@@ -7,7 +7,7 @@
         OIDC_CONTEXT_CLIENT_PROMISE,
         OIDC_CONTEXT_POST_LOGOUT_REDIRECT_URI,
         logout,
-    } from '$lib/_keycloak/'/Keycloak.svelte';
+    } from '$lib/_keycloak/Keycloak.svelte';
     
     import type { OidcContextClientPromise } from '$lib/types';
 
