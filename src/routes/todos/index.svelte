@@ -1,5 +1,3 @@
-
-
 <script lang="ts">
     import { KeycloakProtectedRoute, accessToken, LogoutButton } from '$lib';
     import Header from '../../components/shared/Header/index.svelte';
@@ -10,6 +8,8 @@
     let header = `Bearer ${accessToken}`;
 
     console.log(JSON.stringify(`${accessToken}`));
+
+    let todos = [];
 
     /*initClient({
         url: graphQLEndpoint,
