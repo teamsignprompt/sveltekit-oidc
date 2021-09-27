@@ -14,7 +14,10 @@
         fetchOptions: () => {
             //const token = ;
             return {
-            headers: { authorization: header},
+            headers: { 
+                'content-type': 'application/json',
+                authorization: header
+                },
             };
         },
     });
