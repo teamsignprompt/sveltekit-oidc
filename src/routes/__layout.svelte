@@ -4,6 +4,7 @@
     import Header from '../components/shared/Header/index.svelte';
 </script>
 
+<Header></Header>
 <Keycloak
     issuer={import.meta.env.VITE_OIDC_ISSUER}
     client_id={import.meta.env.VITE_OIDC_CLIENT_ID}
@@ -13,6 +14,5 @@
     refresh_token_endpoint={import.meta.env.VITE_REFRESH_TOKEN_ENDPOINT}
     refresh_page_on_session_timeout={import.meta.env.VITE_REFRESH_PAGE_ON_SESSION_TIMEOUT}
     >
-    <Header></Header>
     <slot></slot>
 </Keycloak>
