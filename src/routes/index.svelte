@@ -4,7 +4,8 @@
 
 <script lang="ts">
     import { isAuthenticated, isLoading, authError, accessToken, LoginButton, LogoutButton } from '$lib';
-
+    import Header from './components/shared/Header/index.svelte';
+    
     let access_token_elem;
     let is_access_token_copied = false;
     function copyAccessTokenToClipboard() {
@@ -30,6 +31,7 @@
 
 </script>
 
+<Header></Header>
 <main class="h-screen-minus-navbar w-screen flex flex-col justify-center items-center bg-gray-800">
     
     <h1 class="mb-4 p-4 text-5xl bg-pink-600 text-gray-200 font-semibold rounded-md shadow-md">Sveltekit + OpenID Auth</h1>
