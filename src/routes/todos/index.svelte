@@ -9,7 +9,7 @@
         fetchOptions: () => {
             //const token = ;
             return {
-            headers: { authorization: token ? `Bearer ${accessToken}` : '' },
+            headers: { authorization: accessToken ? `Bearer ${accessToken}` : '' },
             };
         },
     });
