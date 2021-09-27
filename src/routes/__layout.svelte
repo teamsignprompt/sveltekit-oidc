@@ -1,10 +1,8 @@
 <script lang="ts">
     import "../app.postcss";
     import { Keycloak } from '$lib';
-    import Header from '../components/shared/Header/index.svelte';
+    
 </script>
-
-
 
 <Keycloak
     issuer={import.meta.env.VITE_OIDC_ISSUER}
@@ -17,4 +15,3 @@
     >
     <slot></slot>
 </Keycloak>
-<Header></Header>

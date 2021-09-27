@@ -1,7 +1,10 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { isAuthenticated, isLoading, authError, accessToken, LoginButton, LogoutButton } from '$lib';
+    import Header from '../components/shared/Header/index.svelte';
 </script>
+
+<Header></Header>
 
 <nav class="w-100 bg-gray-500 flex flex-col justify-center items-center h-12">
     <ul class="list-none flex flex-row w-full h-full justify-center items-center">
