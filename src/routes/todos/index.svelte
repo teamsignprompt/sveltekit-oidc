@@ -9,7 +9,7 @@
     console.log(graphQLEndpoint);
 
     initClient({
-        url: '${graphQLEndpoint}',
+        url: graphQLEndpoint,
         fetchOptions: () => {
             //const token = ;
             return {
