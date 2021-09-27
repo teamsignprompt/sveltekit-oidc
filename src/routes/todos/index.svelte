@@ -19,7 +19,7 @@ export const load: Load = async ({ page, fetch, session }) => {
 
     console.log(JSON.stringify(`${accessToken}`));
 
-    initClient({
+    /*initClient({
         url: graphQLEndpoint,
         fetchOptions: () => {
             //const token = ;
@@ -40,7 +40,7 @@ export const load: Load = async ({ page, fetch, session }) => {
         }
     `);
 
-    query(todos);
+    query(todos);*/
 
 </script>
 
