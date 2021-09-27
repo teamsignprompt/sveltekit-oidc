@@ -51,5 +51,6 @@
             </ul>
         {/if}-->
         <LogoutButton>Logout</LogoutButton>
+        ${accessToken}
     </div>
 </KeycloakProtectedRoute>
