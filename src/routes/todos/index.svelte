@@ -7,9 +7,9 @@
     initClient({
         url: '${import.meta.env.GRAPHQL_ENDPOINT}',
         fetchOptions: () => {
-            const token = ${accessToken};
+            //const token = ;
             return {
-            headers: { authorization: token ? `Bearer ${token}` : '' },
+            headers: { authorization: token ? `Bearer ${accessToken}` : '' },
             };
         },
     });
