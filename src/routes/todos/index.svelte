@@ -1,12 +1,25 @@
 <script lang="ts">
-    import { KeycloakProtectedRoute, LogoutButton } from '$lib';
+    import { KeycloakProtectedRoute, accessToken, LogoutButton } from '$lib';
     import Header from '../../components/shared/Header/index.svelte';
+    import { createClient } from '@urql/svelte';
+    import { initClient } from '@urql/svelte';
+
+    initClient({
+        url: '${import.meta.env.GRAPHQL_ENDPOINT}',
+        fetchOptions: () => {
+            //const token = getToken();
+            return {
+            headers: { authorization: token ? `Bearer {$accessToken} : '' },
+            };
+        },
+    });
 </script>
 
 <KeycloakProtectedRoute>
     <Header></Header>
     <div class="h-screen-minus-navbar bg-gray-800 text-white flex flex-col justify-center items-center w-full">
         This is a protected page
+        
         <LogoutButton>Logout</LogoutButton>
     </div>
 </KeycloakProtectedRoute>
