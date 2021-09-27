@@ -1,12 +1,4 @@
-<script context="module" lang="ts">
 
-import type { Load } from '@sveltejs/kit';
-
-export const load: Load = async ({ page, fetch, session }) => {
-    console.log("Loading");
-};
-
-</script>
 
 <script lang="ts">
     import { KeycloakProtectedRoute, accessToken, LogoutButton } from '$lib';
