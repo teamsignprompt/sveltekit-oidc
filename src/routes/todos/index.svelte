@@ -2,7 +2,7 @@
     import { KeycloakProtectedRoute, accessToken, LogoutButton } from '$lib';
     import Header from '../../components/shared/Header/index.svelte';
     import { createClient } from '@urql/svelte';
-    import { initClient } from '@urql/svelte';
+    import { initClient, operationStore, query } from '@urql/svelte';
 
     initClient({
         url: '${import.meta.env.GRAPHQL_ENDPOINT}',
@@ -13,6 +13,17 @@
             };
         },
     });
+
+    const todos = operationStore(`
+        query MyQuery {
+            test_test {
+                uuid
+            }
+        }
+    `);
+
+    query(todos);
+
 </script>
 
 <KeycloakProtectedRoute>
