@@ -14,9 +14,6 @@ const config = {
 		package: {
 			dir: 'sveltekit-oidc',
 		},
-		define: {
-            'process.env': process.env,
-        },
 		adapter: vercel()
 	}
 };
