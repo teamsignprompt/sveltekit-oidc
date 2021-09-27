@@ -6,7 +6,9 @@
 
     let graphQLEndpoint = import.meta.env.GRAPHQL_ENDPOINT;
 
-    initClient({
+    console.log(graphQLEndpoint);
+
+    /*initClient({
         url: '${graphQLEndpoint}',
         fetchOptions: () => {
             //const token = ;
@@ -24,7 +26,7 @@
         }
     `);
 
-    query(todos);
+    query(todos);*/
 
 </script>
 
