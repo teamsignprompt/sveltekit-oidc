@@ -1,6 +1,6 @@
 /// <reference types="@sveltejs/kit" />
 interface ImportMetaEnv {
-    GRAPHQL_ENDPOINT: string;
+    VITE_GRAPHQL_ENDPOINT: string;
     VITE_OIDC_ISSUER: string;
     VITE_OIDC_CLIENT_ID: string;
     VITE_OIDC_CLIENT_SECRET: string;

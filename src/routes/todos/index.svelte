@@ -4,7 +4,7 @@
     import { createClient } from '@urql/svelte';
     import { initClient, operationStore, query } from '@urql/svelte';
 
-    let graphQLEndpoint = import.meta.env.GRAPHQL_ENDPOINT;
+    let graphQLEndpoint = `${import.meta.env.VITE_GRAPHQL_ENDPOINT}`;
 
     console.log(graphQLEndpoint);
 
