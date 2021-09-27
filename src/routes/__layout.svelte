@@ -5,7 +5,7 @@
 </script>
 
 
-<Header></Header>
+
 <Keycloak
     issuer={import.meta.env.VITE_OIDC_ISSUER}
     client_id={import.meta.env.VITE_OIDC_CLIENT_ID}
@@ -17,3 +17,4 @@
     >
     <slot></slot>
 </Keycloak>
+<Header></Header>
