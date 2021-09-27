@@ -8,7 +8,7 @@
 
     console.log(graphQLEndpoint);
 
-    /*initClient({
+    initClient({
         url: '${graphQLEndpoint}',
         fetchOptions: () => {
             //const token = ;
@@ -26,7 +26,7 @@
         }
     `);
 
-    query(todos);*/
+    query(todos);
 
 </script>
 
