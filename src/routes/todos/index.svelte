@@ -4,8 +4,10 @@
     import { createClient } from '@urql/svelte';
     import { initClient, operationStore, query } from '@urql/svelte';
 
+    let graphQLEndpoint = import.meta.env.GRAPHQL_ENDPOINT;
+
     initClient({
-        url: '${import.meta.env.GRAPHQL_ENDPOINT}',
+        url: '${graphQLEndpoint}',
         fetchOptions: () => {
             //const token = ;
             return {
