@@ -5,15 +5,16 @@
     import { initClient, operationStore, query } from '@urql/svelte';
 
     let graphQLEndpoint = `${import.meta.env.VITE_GRAPHQL_ENDPOINT}`;
+    let header = `Bearer ${accessToken}`;
 
-    console.log(graphQLEndpoint);
+    console.log(header);
 
     initClient({
         url: graphQLEndpoint,
         fetchOptions: () => {
             //const token = ;
             return {
-            headers: { authorization: `Bearer ${accessToken}` },
+            headers: { authorization: header},
             };
         },
     });
