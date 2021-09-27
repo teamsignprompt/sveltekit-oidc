@@ -33,8 +33,17 @@
 <KeycloakProtectedRoute>
     <Header></Header>
     <div class="h-screen-minus-navbar bg-gray-800 text-white flex flex-col justify-center items-center w-full">
-        This is a protected page
-        {$accessToken}
+        {#if $todos.fetching}
+<p>Loading...</p>
+{:else if $todos.error}
+<p>Oh no... {$todos.error.message}</p>
+{:else}
+<ul>
+  {#each $todos.data.test_test as todo}
+  <li>{todo.uuid}</li>
+  {/each}
+</ul>
+{/if}
         <LogoutButton>Logout</LogoutButton>
     </div>
 </KeycloakProtectedRoute>
