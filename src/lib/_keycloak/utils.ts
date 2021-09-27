@@ -135,6 +135,8 @@ export async function renewOIDCToken(refresh_token: string, oidcBaseUrl: string,
         return error_data;
     }
 
+	console.log("Fetching...");
+
     const res = await fetch(`${oidcBaseUrl}/token`, {
         method: 'POST',
         headers: {
