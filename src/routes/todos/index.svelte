@@ -6,9 +6,9 @@
     import { session, page } from '$app/stores';
 
     let graphQLEndpoint = `${import.meta.env.VITE_GRAPHQL_ENDPOINT}`;
-    let header = `Bearer ${accessToken}`;
+    let header = `Bearer ${session.access_token}`;
 
-    console.log(JSON.stringify(`${accessToken}`));
+    console.log(Jheader);
 
     let todos = [];
 
@@ -16,7 +16,7 @@
         console.log("No access token");
     }
     else{
-        console.log($session.access_token);
+        //console.log($session.access_token);
     }
 
     /*initClient({
