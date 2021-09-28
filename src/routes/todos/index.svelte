@@ -8,7 +8,7 @@
     let graphQLEndpoint = `${import.meta.env.VITE_GRAPHQL_ENDPOINT}`;
     let header = `Bearer ${session.access_token}`;
 
-    console.log(Jheader);
+    console.log(header);
 
     let todos = [];
 
