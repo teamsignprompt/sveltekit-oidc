@@ -3,7 +3,6 @@
     import Header from '../../components/shared/Header/index.svelte';
     import { createClient } from '@urql/svelte';
     import { initClient, operationStore, query } from '@urql/svelte';
-    import cookie from 'cookie'
 
     let graphQLEndpoint = `${import.meta.env.VITE_GRAPHQL_ENDPOINT}`;
     let header = `Bearer ${accessToken}`;
