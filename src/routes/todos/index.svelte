@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { KeycloakProtectedRoute, accessToken, LogoutButton } from '$lib';
+    import { isAuthenticated, isLoading, authError, KeycloakProtectedRoute, accessToken, LogoutButton } from '$lib';
     import Header from '../../components/shared/Header/index.svelte';
     import { createClient } from '@urql/svelte';
     import { initClient, operationStore, query } from '@urql/svelte';
@@ -12,20 +12,7 @@
 
     let todos = [];
 
-    export async function handle({ request, resolve }) {
-    const cookies = cookie.parse(request.headers.cookie || '')
-
-    // code here happends before the endpoint or page is called
-    request.locals.user = cookies.user
-    console.log({ user: request.locals.user })
-
-    const response = await resolve(request)
-
-    // code here happens after the endpoint or page is called
-    response.headers['set-cookie'] = `user=${request.locals.user || ''}; Path=/; HttpOnly`
-    
-    return response
-    }
+   
 
     /*initClient({
         url: graphQLEndpoint,
@@ -51,6 +38,10 @@
     query(todos);*/
 
 </script>
+
+{#if $isAuthenticated}
+Authenticated...what's going on?
+{/if}
 
 <KeycloakProtectedRoute>
     <Header></Header>
