@@ -8,12 +8,10 @@
     let graphQLEndpoint = `${import.meta.env.VITE_GRAPHQL_ENDPOINT}`;
     let header = `Bearer ${session.access_token}`;
 
-    console.log(header);
-
-    let todos = [];
+    //console.log(header);
 
     if ( !$session?.access_token){
-        console.log("No access token");
+        //console.log("No access token");
     }
     else{
         //console.log($session.access_token);
@@ -49,10 +47,8 @@
 <KeycloakProtectedRoute>
     <Header></Header>
     <div class="h-screen-minus-navbar bg-gray-800 text-white flex flex-col justify-center items-center w-full">
-    {#if $isAuthenticated}
-Authenticated...what's going on?
-{/if}
-        <!--{#if $todos.fetching}
+
+    {#if $todos.fetching}
             <p>Loading...</p>
         {:else if $todos.error}
             <p>Oh no... {$todos.error.message}</p>
