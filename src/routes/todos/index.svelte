@@ -6,7 +6,7 @@
     import { session, page } from '$app/stores';
 
     let graphQLEndpoint = `${import.meta.env.VITE_GRAPHQL_ENDPOINT}`;
-    let header = 'Bearer `+$session.access_token;
+    let header = `Bearer `+$session.access_token;
 
     console.log(header);
 
