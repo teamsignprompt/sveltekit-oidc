@@ -17,7 +17,7 @@
         //console.log($session.access_token);
     }
 
-    /*initClient({
+    initClient({
         url: graphQLEndpoint,
         fetchOptions: () => {
             //const token = ;
@@ -38,7 +38,7 @@
         }
     `);
 
-    query(todos);*/
+    query(todos);
 
 </script>
 
@@ -58,7 +58,7 @@
                 <li>{todo.uuid}</li>
                 {/each}
             </ul>
-        {/if}-->
+        {/if}
         <LogoutButton>Logout</LogoutButton>
         ${accessToken}
     </div>
