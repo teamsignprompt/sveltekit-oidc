@@ -6,7 +6,7 @@
     import { session, page } from '$app/stores';
 
     let graphQLEndpoint = `${import.meta.env.VITE_GRAPHQL_ENDPOINT}`;
-    let header = `Bearer ${$session.access_token}`;
+    let header = 'Bearer '+$session.access_token;
 
     initClient({
         url: graphQLEndpoint,
@@ -38,7 +38,7 @@
     <Header></Header>
     <div class="h-screen-minus-navbar bg-gray-800 text-white flex flex-col justify-center items-center w-full">
 
-    {#if $todos.fetching}
+        {#if $todos.fetching}
             <p>Loading...</p>
         {:else if $todos.error}
             <p>Oh no... {$todos.error.message}</p>
@@ -49,7 +49,6 @@
                 {/each}
             </ul>
         {/if}
-        <LogoutButton>Logout</LogoutButton>
-        ${accessToken}
+
     </div>
 </KeycloakProtectedRoute>
