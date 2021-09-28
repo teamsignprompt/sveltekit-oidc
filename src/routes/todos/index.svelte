@@ -39,13 +39,14 @@
 
 </script>
 
-{#if $isAuthenticated}
-Authenticated...what's going on?
-{/if}
+
 
 <KeycloakProtectedRoute>
     <Header></Header>
     <div class="h-screen-minus-navbar bg-gray-800 text-white flex flex-col justify-center items-center w-full">
+    {#if $isAuthenticated}
+Authenticated...what's going on?
+{/if}
         <!--{#if $todos.fetching}
             <p>Loading...</p>
         {:else if $todos.error}
